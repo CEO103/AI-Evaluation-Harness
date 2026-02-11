@@ -1,0 +1,644 @@
+{
+  "summary": {
+    "total": 50,
+    "passed": 15,
+    "failed": 35,
+    "pass_rate": 0.3
+  },
+  "by_task": {
+    "classification": {
+      "total": 25,
+      "pass_rate": 0.0
+    },
+    "json_extraction": {
+      "total": 15,
+      "pass_rate": 1.0
+    },
+    "qa": {
+      "total": 10,
+      "pass_rate": 0.0
+    }
+  },
+  "failures": [
+    {
+      "id": "TC001",
+      "task": "classification",
+      "input": "Payment failed but money deducted from my account",
+      "expected": {
+        "label": "billing",
+        "urgency": "high"
+      },
+      "actual": {
+        "label": "billing_issue",
+        "urgency": "medium"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": false,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC002",
+      "task": "classification",
+      "input": "I was charged twice for the same subscription this month",
+      "expected": {
+        "label": "billing",
+        "urgency": "high"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": false,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC003",
+      "task": "classification",
+      "input": "Refund not received yet, can you check?",
+      "expected": {
+        "label": "billing",
+        "urgency": "medium"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": false,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC004",
+      "task": "classification",
+      "input": "Invoice needed for last month's purchase",
+      "expected": {
+        "label": "billing",
+        "urgency": "low"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": true,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC005",
+      "task": "classification",
+      "input": "My UPI payment is stuck in pending status",
+      "expected": {
+        "label": "billing",
+        "urgency": "high"
+      },
+      "actual": {
+        "label": "billing_issue",
+        "urgency": "medium"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": false,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC006",
+      "task": "classification",
+      "input": "App crashes when I try to login",
+      "expected": {
+        "label": "technical",
+        "urgency": "high"
+      },
+      "actual": {
+        "label": "bug_report",
+        "urgency": "high"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": true,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC007",
+      "task": "classification",
+      "input": "Website is down for me since morning",
+      "expected": {
+        "label": "technical",
+        "urgency": "high"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": false,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC008",
+      "task": "classification",
+      "input": "I keep getting 500 error on checkout page",
+      "expected": {
+        "label": "technical",
+        "urgency": "high"
+      },
+      "actual": {
+        "label": "bug_report",
+        "urgency": "high"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": true,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC009",
+      "task": "classification",
+      "input": "The app is very slow after the latest update",
+      "expected": {
+        "label": "technical",
+        "urgency": "medium"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": false,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC010",
+      "task": "classification",
+      "input": "Images are not loading on the product page",
+      "expected": {
+        "label": "technical",
+        "urgency": "medium"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": false,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC011",
+      "task": "classification",
+      "input": "How do I change my registered email address?",
+      "expected": {
+        "label": "account",
+        "urgency": "low"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": true,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC012",
+      "task": "classification",
+      "input": "I forgot my password and cannot login",
+      "expected": {
+        "label": "account",
+        "urgency": "medium"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": false,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC013",
+      "task": "classification",
+      "input": "Please delete my account permanently",
+      "expected": {
+        "label": "account",
+        "urgency": "medium"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": false,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC014",
+      "task": "classification",
+      "input": "Unable to verify OTP, not receiving SMS",
+      "expected": {
+        "label": "account",
+        "urgency": "high"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": false,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC015",
+      "task": "classification",
+      "input": "Need help updating phone number linked to account",
+      "expected": {
+        "label": "account",
+        "urgency": "low"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": true,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC016",
+      "task": "classification",
+      "input": "Can you add dark mode in the app?",
+      "expected": {
+        "label": "feature_request",
+        "urgency": "low"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": true,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC017",
+      "task": "classification",
+      "input": "It would be great if you add export to CSV option",
+      "expected": {
+        "label": "feature_request",
+        "urgency": "low"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": true,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC018",
+      "task": "classification",
+      "input": "Requesting integration with Slack notifications",
+      "expected": {
+        "label": "feature_request",
+        "urgency": "low"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": true,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC019",
+      "task": "classification",
+      "input": "I want a new filter for sorting orders by amount",
+      "expected": {
+        "label": "feature_request",
+        "urgency": "low"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": true,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC020",
+      "task": "classification",
+      "input": "Can you support multi-language UI? Hindi would be helpful",
+      "expected": {
+        "label": "feature_request",
+        "urgency": "low"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": true,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC036",
+      "task": "qa",
+      "input": "How do I reset my password?",
+      "expected": "Go to Settings, open Security, and click Reset Password. Follow the instructions sent to your email.",
+      "actual": "How do I reset my password?",
+      "metrics": {
+        "similarity": 0.295
+      },
+      "passed": false,
+      "reason": "Low similarity score: 0.295"
+    },
+    {
+      "id": "TC037",
+      "task": "qa",
+      "input": "How can I change my email address?",
+      "expected": "You can change your email from Account Settings. Update the email and verify it using the OTP link.",
+      "actual": "How can I change my email address?",
+      "metrics": {
+        "similarity": 0.385
+      },
+      "passed": false,
+      "reason": "Low similarity score: 0.385"
+    },
+    {
+      "id": "TC038",
+      "task": "qa",
+      "input": "What should I do if payment fails but money is deducted?",
+      "expected": "If money is deducted but payment failed, wait for the auto-refund window. If not refunded, contact support with transaction ID.",
+      "actual": "What should I do if payment fails but money is deducted?",
+      "metrics": {
+        "similarity": 0.226
+      },
+      "passed": false,
+      "reason": "Low similarity score: 0.226"
+    },
+    {
+      "id": "TC039",
+      "task": "qa",
+      "input": "The app is crashing, what can I try?",
+      "expected": "Try updating the app, clearing cache, and restarting your phone. If the issue continues, share the crash details with support.",
+      "actual": "The app is crashing, what can I try?",
+      "metrics": {
+        "similarity": 0.284
+      },
+      "passed": false,
+      "reason": "Low similarity score: 0.284"
+    },
+    {
+      "id": "TC040",
+      "task": "qa",
+      "input": "How to delete my account?",
+      "expected": "Go to Account Settings and select Delete Account. Confirm the request to permanently remove your data.",
+      "actual": "How to delete my account?",
+      "metrics": {
+        "similarity": 0.194
+      },
+      "passed": false,
+      "reason": "Low similarity score: 0.194"
+    },
+    {
+      "id": "TC041",
+      "task": "qa",
+      "input": "I am not receiving OTP, what can I do?",
+      "expected": "Check network and SMS inbox, try again after a few minutes, and ensure the phone number is correct. Contact support if OTP still does not arrive.",
+      "actual": "I am not receiving OTP, what can I do?",
+      "metrics": {
+        "similarity": 0.203
+      },
+      "passed": false,
+      "reason": "Low similarity score: 0.203"
+    },
+    {
+      "id": "TC042",
+      "task": "qa",
+      "input": "How do I get an invoice?",
+      "expected": "You can download invoices from Billing or Orders section. Select the transaction and click Download Invoice.",
+      "actual": "How do I get an invoice?",
+      "metrics": {
+        "similarity": 0.202
+      },
+      "passed": false,
+      "reason": "Low similarity score: 0.202"
+    },
+    {
+      "id": "TC043",
+      "task": "qa",
+      "input": "Website is down, what now?",
+      "expected": "Please check our status page, try again after some time, and share your region and error details with support if it persists.",
+      "actual": "Website is down, what now?",
+      "metrics": {
+        "similarity": 0.151
+      },
+      "passed": false,
+      "reason": "Low similarity score: 0.151"
+    },
+    {
+      "id": "TC044",
+      "task": "qa",
+      "input": "How can I request a feature?",
+      "expected": "You can submit feature requests through the feedback form or support chat. Include details and expected workflow.",
+      "actual": "How can I request a feature?",
+      "metrics": {
+        "similarity": 0.232
+      },
+      "passed": false,
+      "reason": "Low similarity score: 0.232"
+    },
+    {
+      "id": "TC045",
+      "task": "qa",
+      "input": "My subscription was charged twice, what should I do?",
+      "expected": "Please share both transaction IDs with support. We will verify and process a refund for the duplicate charge if applicable.",
+      "actual": "My subscription was charged twice, what should I do?",
+      "metrics": {
+        "similarity": 0.222
+      },
+      "passed": false,
+      "reason": "Low similarity score: 0.222"
+    },
+    {
+      "id": "TC046",
+      "task": "classification",
+      "input": "I have a suggestion: add ability to download monthly reports",
+      "expected": {
+        "label": "feature_request",
+        "urgency": "low"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": true,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC047",
+      "task": "classification",
+      "input": "Cannot login since yesterday, urgent help needed",
+      "expected": {
+        "label": "account",
+        "urgency": "high"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": false,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC048",
+      "task": "classification",
+      "input": "My account got locked after too many attempts",
+      "expected": {
+        "label": "account",
+        "urgency": "medium"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": false,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC049",
+      "task": "classification",
+      "input": "Checkout page shows blank screen sometimes",
+      "expected": {
+        "label": "technical",
+        "urgency": "medium"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": false,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    },
+    {
+      "id": "TC050",
+      "task": "classification",
+      "input": "How long does it take to receive the refund?",
+      "expected": {
+        "label": "billing",
+        "urgency": "low"
+      },
+      "actual": {
+        "label": "general_query",
+        "urgency": "low"
+      },
+      "metrics": {
+        "label_match": false,
+        "urgency_match": true,
+        "exact_match": false
+      },
+      "passed": false,
+      "reason": "Classification mismatch"
+    }
+  ]
+}

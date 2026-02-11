@@ -1,0 +1,50 @@
+{"id":"TC001","task":"classification","input":"Payment failed but money deducted from my account","expected":{"label":"billing","urgency":"high"}}
+{"id":"TC002","task":"classification","input":"I was charged twice for the same subscription this month","expected":{"label":"billing","urgency":"high"}}
+{"id":"TC003","task":"classification","input":"Refund not received yet, can you check?","expected":{"label":"billing","urgency":"medium"}}
+{"id":"TC004","task":"classification","input":"Invoice needed for last month's purchase","expected":{"label":"billing","urgency":"low"}}
+{"id":"TC005","task":"classification","input":"My UPI payment is stuck in pending status","expected":{"label":"billing","urgency":"high"}}
+{"id":"TC006","task":"classification","input":"App crashes when I try to login","expected":{"label":"technical","urgency":"high"}}
+{"id":"TC007","task":"classification","input":"Website is down for me since morning","expected":{"label":"technical","urgency":"high"}}
+{"id":"TC008","task":"classification","input":"I keep getting 500 error on checkout page","expected":{"label":"technical","urgency":"high"}}
+{"id":"TC009","task":"classification","input":"The app is very slow after the latest update","expected":{"label":"technical","urgency":"medium"}}
+{"id":"TC010","task":"classification","input":"Images are not loading on the product page","expected":{"label":"technical","urgency":"medium"}}
+{"id":"TC011","task":"classification","input":"How do I change my registered email address?","expected":{"label":"account","urgency":"low"}}
+{"id":"TC012","task":"classification","input":"I forgot my password and cannot login","expected":{"label":"account","urgency":"medium"}}
+{"id":"TC013","task":"classification","input":"Please delete my account permanently","expected":{"label":"account","urgency":"medium"}}
+{"id":"TC014","task":"classification","input":"Unable to verify OTP, not receiving SMS","expected":{"label":"account","urgency":"high"}}
+{"id":"TC015","task":"classification","input":"Need help updating phone number linked to account","expected":{"label":"account","urgency":"low"}}
+{"id":"TC016","task":"classification","input":"Can you add dark mode in the app?","expected":{"label":"feature_request","urgency":"low"}}
+{"id":"TC017","task":"classification","input":"It would be great if you add export to CSV option","expected":{"label":"feature_request","urgency":"low"}}
+{"id":"TC018","task":"classification","input":"Requesting integration with Slack notifications","expected":{"label":"feature_request","urgency":"low"}}
+{"id":"TC019","task":"classification","input":"I want a new filter for sorting orders by amount","expected":{"label":"feature_request","urgency":"low"}}
+{"id":"TC020","task":"classification","input":"Can you support multi-language UI? Hindi would be helpful","expected":{"label":"feature_request","urgency":"low"}}
+{"id":"TC021","task":"json_extraction","input":"Order 2 burgers and 1 fries","expected":{"items":[{"name":"burger","qty":2},{"name":"fries","qty":1}]}}
+{"id":"TC022","task":"json_extraction","input":"Please get me 1 pizza","expected":{"items":[{"name":"pizza","qty":1}]}}
+{"id":"TC023","task":"json_extraction","input":"Need 3 cokes and 2 sandwiches","expected":{"items":[{"name":"coke","qty":3},{"name":"sandwich","qty":2}]}}
+{"id":"TC024","task":"json_extraction","input":"Buy 5 apples","expected":{"items":[{"name":"apple","qty":5}]}}
+{"id":"TC025","task":"json_extraction","input":"Get 2 chai and 1 samosa","expected":{"items":[{"name":"chai","qty":2},{"name":"samosa","qty":1}]}}
+{"id":"TC026","task":"json_extraction","input":"Order two coffees and one croissant","expected":{"items":[{"name":"coffee","qty":2},{"name":"croissant","qty":1}]}}
+{"id":"TC027","task":"json_extraction","input":"I want 4 idlis, 1 dosa, and 2 vadas","expected":{"items":[{"name":"idli","qty":4},{"name":"dosa","qty":1},{"name":"vada","qty":2}]}}
+{"id":"TC028","task":"json_extraction","input":"Add 1 laptop and 2 mouse to cart","expected":{"items":[{"name":"laptop","qty":1},{"name":"mouse","qty":2}]}}
+{"id":"TC029","task":"json_extraction","input":"Please order 10 pens","expected":{"items":[{"name":"pen","qty":10}]}}
+{"id":"TC030","task":"json_extraction","input":"Get me 2 notebooks and 3 markers","expected":{"items":[{"name":"notebook","qty":2},{"name":"marker","qty":3}]}}
+{"id":"TC031","task":"json_extraction","input":"Schedule a meeting with Rahul tomorrow at 3pm","expected":{"title":"meeting","participants":["Rahul"],"date":"tomorrow","time":"3pm"}}
+{"id":"TC032","task":"json_extraction","input":"Book a call with Ananya on Monday 11am","expected":{"title":"call","participants":["Ananya"],"date":"Monday","time":"11am"}}
+{"id":"TC033","task":"json_extraction","input":"Set up a demo with client Mohit next Friday 2pm","expected":{"title":"demo","participants":["Mohit"],"date":"next Friday","time":"2pm"}}
+{"id":"TC034","task":"json_extraction","input":"Arrange interview with candidate Priya on 5 Feb at 4pm","expected":{"title":"interview","participants":["Priya"],"date":"5 Feb","time":"4pm"}}
+{"id":"TC035","task":"json_extraction","input":"Schedule a sync with team on Wednesday 10:30am","expected":{"title":"sync","participants":["team"],"date":"Wednesday","time":"10:30am"}}
+{"id":"TC036","task":"qa","input":"How do I reset my password?","expected":{"answer":"Go to Settings, open Security, and click Reset Password. Follow the instructions sent to your email."}}
+{"id":"TC037","task":"qa","input":"How can I change my email address?","expected":{"answer":"You can change your email from Account Settings. Update the email and verify it using the OTP link."}}
+{"id":"TC038","task":"qa","input":"What should I do if payment fails but money is deducted?","expected":{"answer":"If money is deducted but payment failed, wait for the auto-refund window. If not refunded, contact support with transaction ID."}}
+{"id":"TC039","task":"qa","input":"The app is crashing, what can I try?","expected":{"answer":"Try updating the app, clearing cache, and restarting your phone. If the issue continues, share the crash details with support."}}
+{"id":"TC040","task":"qa","input":"How to delete my account?","expected":{"answer":"Go to Account Settings and select Delete Account. Confirm the request to permanently remove your data."}}
+{"id":"TC041","task":"qa","input":"I am not receiving OTP, what can I do?","expected":{"answer":"Check network and SMS inbox, try again after a few minutes, and ensure the phone number is correct. Contact support if OTP still does not arrive."}}
+{"id":"TC042","task":"qa","input":"How do I get an invoice?","expected":{"answer":"You can download invoices from Billing or Orders section. Select the transaction and click Download Invoice."}}
+{"id":"TC043","task":"qa","input":"Website is down, what now?","expected":{"answer":"Please check our status page, try again after some time, and share your region and error details with support if it persists."}}
+{"id":"TC044","task":"qa","input":"How can I request a feature?","expected":{"answer":"You can submit feature requests through the feedback form or support chat. Include details and expected workflow."}}
+{"id":"TC045","task":"qa","input":"My subscription was charged twice, what should I do?","expected":{"answer":"Please share both transaction IDs with support. We will verify and process a refund for the duplicate charge if applicable."}}
+{"id":"TC046","task":"classification","input":"I have a suggestion: add ability to download monthly reports","expected":{"label":"feature_request","urgency":"low"}}
+{"id":"TC047","task":"classification","input":"Cannot login since yesterday, urgent help needed","expected":{"label":"account","urgency":"high"}}
+{"id":"TC048","task":"classification","input":"My account got locked after too many attempts","expected":{"label":"account","urgency":"medium"}}
+{"id":"TC049","task":"classification","input":"Checkout page shows blank screen sometimes","expected":{"label":"technical","urgency":"medium"}}
+{"id":"TC050","task":"classification","input":"How long does it take to receive the refund?","expected":{"label":"billing","urgency":"low"}}
