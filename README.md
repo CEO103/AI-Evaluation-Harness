@@ -2,7 +2,7 @@
 
 This project implements a lightweight AI evaluation framework designed to measure model output quality across multiple AI task types.
 
-The goal is to demonstrate how evaluation infrastructure can be structured, modularized, and extended for real-world AI systems.
+The goal is to demonstrate how evaluation  infrastructure can be structured, modularized, and extended for real-world AI systems.
 
 ---
 
@@ -36,3 +36,4 @@ Run evaluation:
 
 ```bash
 python eval.py run --tests tests.jsonl --output report.json
+
